@@ -21,7 +21,7 @@ public class Main {
         System.out.println("Sum of 5 and 7 is: " + result);
         
         Messenger messenger2 = new EmailMessenger();
-        messenger.sendMessage("The sum of 5 and 7 is: " + result);
+        messenger2.sendMessage("The sum of 5 and 7 is: " + result);
 
         Person[] people = new Person[5];
         final int b = 10;
@@ -41,8 +41,8 @@ public class Main {
         for (Person person : people) {
             if (person != null) {
                 int result2 = MathUtils.add(person.getAge(), b);
-                System.out.println("Result for " + person.getName() + ": " + result);
-                messenger3.sendMessage("Result for " + person.getName() + ": " + result); 
+                System.out.println("Result for " + person.getName() + ": " + result2);
+                messenger3.sendMessage("Result for " + person.getName() + ": " + result2); 
             }
         }
     }
