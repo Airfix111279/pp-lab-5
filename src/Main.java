@@ -21,6 +21,6 @@ public class Main {
         System.out.println("Sum of 5 and 7 is: " + result);
         
         Messenger messenger2 = new EmailMessenger();
-        messenger.sendMessage("The sum of 5 and 7 is: " + result);
+        messenger2.sendMessage("The sum of 5 and 7 is: " + result);
     }
 }
