@@ -22,5 +22,28 @@ public class Main {
         
         Messenger messenger2 = new EmailMessenger();
         messenger.sendMessage("The sum of 5 and 7 is: " + result);
+
+        Person[] people = new Person[5];
+        final int b = 10;
+
+        try {
+            people[0] = new Person("John Doe", 30);
+            people[1] = new Person("Alice Smith", 25);
+            people[2] = new Person("Bob Johnson", 40);
+            people[3] = new Person("Emma Brown", 35);
+            people[4] = new Person("Michael Davis", 20);
+        } catch (InvalidAgeException e) {
+            System.out.println("Invalid age: " + e.getMessage());
+        }
+
+        Messenger messenger3 = new EmailMessenger();
+
+        for (Person person : people) {
+            if (person != null) {
+                int result2 = MathUtils.add(person.getAge(), b);
+                System.out.println("Result for " + person.getName() + ": " + result);
+                messenger3.sendMessage("Result for " + person.getName() + ": " + result); 
+            }
+        }
     }
 }
